@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-25T14:44:48 IST" name="ecommerce" finished-at="2026-06-25T14:47:49 IST" duration-ms="181518">
+    <groups>
+    </groups>
+    <test started-at="2026-06-25T14:44:48 IST" name="Test1" finished-at="2026-06-25T14:47:49 IST" duration-ms="181518">
+      <class name="tests.RemoveCartTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.RemoveCartTest@6d0b5baf]" started-at="2026-06-25T14:45:18 IST" name="Launchbrowser" finished-at="2026-06-25T14:45:20 IST" duration-ms="2579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="removeCartTest()[pri:0, instance:tests.RemoveCartTest@6d0b5baf]" started-at="2026-06-25T14:45:20 IST" name="removeCartTest" finished-at="2026-06-25T14:45:36 IST" duration-ms="15993" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RemoveCartTest@6d0b5baf]" started-at="2026-06-25T14:45:36 IST" name="tearDown" finished-at="2026-06-25T14:45:37 IST" duration-ms="538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RemoveCartTest -->
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.LoginTest@5860f3d7]" started-at="2026-06-25T14:44:48 IST" name="Launchbrowser" finished-at="2026-06-25T14:44:51 IST" duration-ms="2566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="login()[pri:0, instance:tests.LoginTest@5860f3d7]" started-at="2026-06-25T14:44:51 IST" name="login" finished-at="2026-06-25T14:44:52 IST" duration-ms="1355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@5860f3d7]" started-at="2026-06-25T14:44:52 IST" name="tearDown" finished-at="2026-06-25T14:44:53 IST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.AddCartTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.AddCartTest@3a94964]" started-at="2026-06-25T14:44:53 IST" name="Launchbrowser" finished-at="2026-06-25T14:44:55 IST" duration-ms="2181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="login()[pri:0, instance:tests.AddCartTest@3a94964]" started-at="2026-06-25T14:44:55 IST" name="login" finished-at="2026-06-25T14:45:02 IST" duration-ms="7549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddCartTest@3a94964]" started-at="2026-06-25T14:45:02 IST" name="tearDown" finished-at="2026-06-25T14:45:03 IST" duration-ms="414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AddCartTest -->
+      <class name="tests.ViewCartTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.ViewCartTest@2a3591c5]" started-at="2026-06-25T14:45:49 IST" name="Launchbrowser" finished-at="2026-06-25T14:45:51 IST" duration-ms="2369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="view()[pri:0, instance:tests.ViewCartTest@2a3591c5]" started-at="2026-06-25T14:45:51 IST" name="view" finished-at="2026-06-25T14:46:05 IST" duration-ms="13826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- view -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ViewCartTest@2a3591c5]" started-at="2026-06-25T14:46:05 IST" name="tearDown" finished-at="2026-06-25T14:46:05 IST" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ViewCartTest -->
+      <class name="tests.BackHomeTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.BackHomeTest@107ed6fc]" started-at="2026-06-25T14:46:49 IST" name="Launchbrowser" finished-at="2026-06-25T14:46:51 IST" duration-ms="2257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="CheckoutOverview()[pri:0, instance:tests.BackHomeTest@107ed6fc]" started-at="2026-06-25T14:46:51 IST" name="CheckoutOverview" finished-at="2026-06-25T14:47:17 IST" duration-ms="25090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckoutOverview -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BackHomeTest@107ed6fc]" started-at="2026-06-25T14:47:17 IST" name="tearDown" finished-at="2026-06-25T14:47:17 IST" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.BackHomeTest -->
+      <class name="tests.ContinueShoppingTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.ContinueShoppingTest@631e06ab]" started-at="2026-06-25T14:45:37 IST" name="Launchbrowser" finished-at="2026-06-25T14:45:39 IST" duration-ms="2310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="login()[pri:0, instance:tests.ContinueShoppingTest@631e06ab]" started-at="2026-06-25T14:45:39 IST" name="login" finished-at="2026-06-25T14:45:48 IST" duration-ms="8939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ContinueShoppingTest@631e06ab]" started-at="2026-06-25T14:45:48 IST" name="tearDown" finished-at="2026-06-25T14:45:49 IST" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ContinueShoppingTest -->
+      <class name="tests.CheckoutOverviewTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.CheckoutOverviewTest@346a361]" started-at="2026-06-25T14:46:25 IST" name="Launchbrowser" finished-at="2026-06-25T14:46:28 IST" duration-ms="2108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="CheckoutOverview()[pri:0, instance:tests.CheckoutOverviewTest@346a361]" started-at="2026-06-25T14:46:28 IST" name="CheckoutOverview" finished-at="2026-06-25T14:46:49 IST" duration-ms="21288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckoutOverview -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutOverviewTest@346a361]" started-at="2026-06-25T14:46:49 IST" name="tearDown" finished-at="2026-06-25T14:46:49 IST" duration-ms="396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CheckoutOverviewTest -->
+      <class name="tests.CheckoutTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.CheckoutTest@34a75079]" started-at="2026-06-25T14:46:05 IST" name="Launchbrowser" finished-at="2026-06-25T14:46:07 IST" duration-ms="1780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="checkout()[pri:0, instance:tests.CheckoutTest@34a75079]" started-at="2026-06-25T14:46:07 IST" name="checkout" finished-at="2026-06-25T14:46:25 IST" duration-ms="18086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutTest@34a75079]" started-at="2026-06-25T14:46:25 IST" name="tearDown" finished-at="2026-06-25T14:46:25 IST" duration-ms="373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CheckoutTest -->
+      <class name="tests.LogoutTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.LogoutTest@1643d68f]" started-at="2026-06-25T14:47:17 IST" name="Launchbrowser" finished-at="2026-06-25T14:47:19 IST" duration-ms="2128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="CheckoutOverview()[pri:0, instance:tests.LogoutTest@1643d68f]" started-at="2026-06-25T14:47:19 IST" name="CheckoutOverview" finished-at="2026-06-25T14:47:49 IST" duration-ms="29994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckoutOverview -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LogoutTest@1643d68f]" started-at="2026-06-25T14:47:49 IST" name="tearDown" finished-at="2026-06-25T14:47:49 IST" duration-ms="346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LogoutTest -->
+      <class name="tests.MultipleAddCartTest">
+        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.MultipleAddCartTest@5049d8b2]" started-at="2026-06-25T14:45:03 IST" name="Launchbrowser" finished-at="2026-06-25T14:45:05 IST" duration-ms="1994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launchbrowser -->
+        <test-method signature="verifyMultipleAddCart()[pri:0, instance:tests.MultipleAddCartTest@5049d8b2]" started-at="2026-06-25T14:45:05 IST" name="verifyMultipleAddCart" finished-at="2026-06-25T14:45:17 IST" duration-ms="12291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMultipleAddCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.MultipleAddCartTest@5049d8b2]" started-at="2026-06-25T14:45:17 IST" name="tearDown" finished-at="2026-06-25T14:45:18 IST" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MultipleAddCartTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- ecommerce -->
+</testng-results>
