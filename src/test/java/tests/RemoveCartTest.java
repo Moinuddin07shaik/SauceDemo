@@ -7,29 +7,36 @@ import base.BaseClass;
 import pages.AddCartPage;
 import pages.LoginPage;
 import pages.RemoveCartPage;
-import utilites.ConfigReader;
+import utilities.DataProviders;
+
 
 public class RemoveCartTest extends BaseClass
 {
-    @Test
-    public void removeCartTest() throws Exception
-    {
-        LoginPage lt = new LoginPage(driver);
-        ConfigReader config = new ConfigReader();
+	
 
-        lt.login(config.username(), config.password());
+	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+	public void removeCartTest(String username, String password) throws Exception
+	{
+		LoginPage lp = new LoginPage(getDriver(), getWait());
+		lp.login(username, password);
 
-        AddCartPage ad = new AddCartPage(driver);
-        ad.add();
 
-        Assert.assertTrue(
-            driver.getCurrentUrl().contains("cart.html"),
-            "Cart page not opened"
-        );
+		log.info("=========  Remove Cart items ============");
 
-        RemoveCartPage rm = new RemoveCartPage(driver);
-        rm.removeProduct();
+		AddCartPage ad = new AddCartPage(getDriver(), getWait());
+		ad.add();
 
-        log.info("Product removed successfully");
-    }
+		Assert.assertTrue(
+				getDriver().getCurrentUrl().contains("cart.html"),
+				"Cart page not opened"
+				);
+
+
+		log.info("=======  removed exeution started ======= ");
+
+		RemoveCartPage rm = new RemoveCartPage(getDriver(), getWait());
+		rm.removeProduct();
+
+		log.info(" ======== Product removed successfully =======");
+	}
 }

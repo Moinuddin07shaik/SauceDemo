@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
 <suite name="ecommerce">
-	<test thread-count="5" name="Test1">
-		<classes>
 
-			<class name="tests.LoginTest" />
-			<class name="tests.AddCartTest" />
-			<class name="tests.MultipleAddCartTest" />
-			<class name="tests.RemoveCartTest" />
-			<class name="tests.ContinueShoppingTest"/>
-			<class name="tests.ViewCartTest" />
-			<class name="tests.CheckoutTest" />
-			<class name="tests.CheckoutOverviewTest" />
-			<class name="tests.BackHomeTest" />
-			<class name="tests.LogoutTest" />
+    <!-- Listener -->
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
 
-		</classes>
-	</test> <!-- Test1 -->
-</suite> <!-- ecommerce -->
+    <!-- Chrome Tests -->
+    <test name="Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.AddCartTest"/>
+            <class name="tests.MultipleAddCartTest"/>
+            <class name="tests.RemoveCartTest"/>
+            <class name="tests.ContinueShoppingTest"/>
+            <class name="tests.ViewCartTest"/>
+            <class name="tests.CheckoutTest"/>
+            <class name="tests.CheckoutOverviewTest"/>
+            <class name="tests.BackHomeTest"/>
+            <class name="tests.LogoutTest"/>
+        </classes>
+    </test>
+
+</suite>

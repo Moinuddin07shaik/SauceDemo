@@ -7,34 +7,41 @@ import base.BaseClass;
 import pages.AddCartPage;
 import pages.ContinueShoppingPage;
 import pages.LoginPage;
-import utilites.ConfigReader;
+import utilities.DataProviders;
+
 
 public class ContinueShoppingTest extends BaseClass
 {
 
-	@Test
-	public void login() throws Exception
+	@Test(dataProvider = "loginData",dataProviderClass = DataProviders.class)
+	public void login(String username, String password) throws Exception
 	{
-		LoginPage lt = new LoginPage(driver);
-		ConfigReader config = new ConfigReader();
+		LoginPage lt = new LoginPage(getDriver(), getWait());
+		lt.login(username, password);
 
-		lt.login(config.username(), config.password());
+		
+		log.info(" ======= Add to cart page this =========");
 
-		AddCartPage ad = new AddCartPage(driver);
+		AddCartPage ad = new AddCartPage(getDriver(), getWait());
 		ad.add();
 
 		Assert.assertTrue(
-				driver.getCurrentUrl().contains("cart.html"),
+				getDriver().getCurrentUrl().contains("cart.html"),
 				"Cart page not opened"
 				);
 
-		ContinueShoppingPage cp = new ContinueShoppingPage(driver);
+		log.info("======== item add to cart and items views ======== ");
+		
+		
+		ContinueShoppingPage cp = new ContinueShoppingPage(getDriver(), getWait());
 
 		// Step 1: Add first product (already done in login flow or previous page)
 		cp.shopAndPrintProducts();
+		
+		log.info(" ======== Continue shopping flow completed successfully started ======== ");
 
 		Assert.assertTrue(
-				driver.getCurrentUrl().contains("cart.html"),
+				getDriver().getCurrentUrl().contains("cart.html"),
 				"Cart page not opened"
 				);
 

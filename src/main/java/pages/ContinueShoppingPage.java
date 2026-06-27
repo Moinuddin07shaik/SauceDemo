@@ -27,7 +27,7 @@ public class ContinueShoppingPage
     @FindBy(className="inventory_item_name")
     List<WebElement> cartProducts;
 
-    public ContinueShoppingPage(WebDriver driver)
+    public ContinueShoppingPage(WebDriver driver,WebDriverWait wait)
     {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));

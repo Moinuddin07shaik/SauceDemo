@@ -1,0 +1,12 @@
+base\BaseClass.class
+pages\MultipleAddCartPage.class
+pages\RemoveCartPage.class
+pages\LoginPage.class
+utilites\ConfigReader.class
+pages\CheckoutPage.class
+pages\LogoutPage.class
+pages\CheckoutOverviewPage.class
+pages\AddCartPage.class
+pages\ViewCartPage.class
+pages\BackHomePage.class
+pages\ContinueShoppingPage.class

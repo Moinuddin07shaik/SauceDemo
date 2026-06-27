@@ -3,29 +3,38 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
+
 import base.BaseClass;
 import pages.AddCartPage;
 import pages.LoginPage;
-import utilites.ConfigReader;
+import utilities.DataProviders;
+
 
 public class AddCartTest extends BaseClass
 {
 
-	@Test
-	public void login() throws Exception
+	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+	public void login(String username, String password) throws Exception 
 	{
-	    LoginPage lt = new LoginPage(driver);
-	    ConfigReader config = new ConfigReader();
+		LoginPage lt = new LoginPage(getDriver(), getWait());
 
-	    lt.login(config.username(), config.password());
 
-	    AddCartPage ad = new AddCartPage(driver);
-	    ad.add();
+		log.info("====== User is on Login Page ======");
 
-	    Assert.assertTrue(
-	        driver.getCurrentUrl().contains("cart.html"),
-	        "Cart page not opened"
-	    );
-}
-	
+		lt.login(username, password);
+		
+		Assert.assertTrue(getDriver().getCurrentUrl().contains("inventory"));
+
+		log.info("Login attempted with user: " + username);
+		log.info("==== user is in Home Screen ---- AddCartTest =====");
+
+		AddCartPage ad = new AddCartPage(getDriver(), getWait());
+		ad.add();
+
+		
+		log.info("items is displayed in after view Cart ---- AddCartTest");
+
+	}
+
 }

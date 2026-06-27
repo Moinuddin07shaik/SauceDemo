@@ -9,48 +9,51 @@ import pages.CheckoutOverviewPage;
 import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.ViewCartPage;
-import utilites.ConfigReader;
+import utilities.DataProviders;
 
 public class CheckoutOverviewTest extends BaseClass
 {
-	@Test
-	public void CheckoutOverview() throws Exception
+	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+	public void CheckoutOverview(String username, String password) throws Exception
 	{
-	    LoginPage lp = new LoginPage(driver);
-	    ConfigReader config = new ConfigReader();
+		LoginPage lp = new LoginPage(getDriver(), getWait());
+		lp.login(username, password);
 
-	    lp.login(config.username(), config.password());
 
-	    AddCartPage ap = new AddCartPage(driver);
-	    ap.add();
+		AddCartPage acp = new AddCartPage(getDriver(), getWait());
+		acp.add();
 
-	    ViewCartPage vp = new ViewCartPage(driver);
-	    vp.clickCheckout();
+		ViewCartPage vp = new ViewCartPage(getDriver(), getWait());
+		vp.clickCheckout();
 
-	    CheckoutPage cp = new CheckoutPage(driver);
-	    cp.checkoutInfo("Srinu", "Kumar", "500072");
+		CheckoutPage cp = new CheckoutPage(getDriver(), getWait());
+		cp.checkoutInfo("Srinu", "Kumar", "500072");
 
-	    CheckoutOverviewPage cop = new CheckoutOverviewPage(driver);
+		log.info(" ======== Checkout overview page is displayed ========== ");
 
-	    Assert.assertEquals(cop.getProductName(), "Sauce Labs Backpack");
-	    Assert.assertEquals(cop.getProductPrice(), "$29.99");
-	    Assert.assertEquals(cop.getPaymentInfo(), "SauceCard #31337");
+		CheckoutOverviewPage cop = new CheckoutOverviewPage(getDriver(), getWait());
 
-	    System.out.println("Product Name : " + cop.getProductName());
-	    System.out.println("Product Price : " + cop.getProductPrice());
-	    System.out.println("Payment Info : " + cop.getPaymentInfo());
-	    System.out.println("Total Price : " + cop.getTotalPrice());
+		Assert.assertEquals(cop.getProductName(), "Sauce Labs Backpack");
+		Assert.assertEquals(cop.getProductPrice(), "$29.99");
+		Assert.assertEquals(cop.getPaymentInfo(), "SauceCard #31337");
 
-	    cop.clickFinish();
+		System.out.println("Product Name : " + cop.getProductName());
+		System.out.println("Product Price : " + cop.getProductPrice());
+		System.out.println("Payment Info : " + cop.getPaymentInfo());
+		System.out.println("Total Price : " + cop.getTotalPrice());
 
-	    // Success Message Verification
-	    String actualMessage = cop.getSuccessMessage();
+		cop.clickFinish();
 
-	    System.out.println("Order Status : " + actualMessage);
+		log.info(" ======== Checkout overview page is completed ========== ");
 
-	    Assert.assertEquals(actualMessage,
-	            "Thank you for your order!");
+		// Success Message Verification
+		String actualMessage = cop.getSuccessMessage();
 
-	    log.info("Order Placed Successfully");
+		System.out.println("Order Status : " + actualMessage);
+
+		Assert.assertEquals(actualMessage,
+				"Thank you for your order!");
+
+		log.info("Order Placed Successfully");
 	}
 }

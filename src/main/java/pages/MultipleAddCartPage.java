@@ -26,7 +26,7 @@ public class MultipleAddCartPage
     @FindBy(className = "shopping_cart_badge")
     WebElement cartBadge;
 
-    public MultipleAddCartPage(WebDriver driver)
+    public MultipleAddCartPage(WebDriver driver,WebDriverWait wait)
     {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -55,11 +55,11 @@ public class MultipleAddCartPage
 
     public void openCart() throws InterruptedException
     {
-    	Thread.sleep(5000);
+    	Thread.sleep(3000);
         wait.until(ExpectedConditions.elementToBeClickable(viewcart));
         viewcart.click();
         
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         wait.until(ExpectedConditions.urlContains("cart.html"));
     }

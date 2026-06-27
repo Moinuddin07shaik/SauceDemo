@@ -17,14 +17,16 @@ public class BackHomePage
     @FindBy(id="back-to-products")
     WebElement backHomeBtn;
 
-    public BackHomePage(WebDriver driver)
+    public BackHomePage(WebDriver driver,WebDriverWait wait)
     {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    public void clickBackHome() throws InterruptedException
+   
+
+	public void clickBackHome() throws InterruptedException
     {
     	wait.until(ExpectedConditions.elementToBeClickable(backHomeBtn));
         backHomeBtn.click();

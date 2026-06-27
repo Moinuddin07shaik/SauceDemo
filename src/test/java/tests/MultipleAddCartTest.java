@@ -1,39 +1,42 @@
 package tests;
 
-import org.openqa.selenium.By;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
 import pages.LoginPage;
 import pages.MultipleAddCartPage;
-import utilites.ConfigReader;
+import utilities.DataProviders;
 
 public class MultipleAddCartTest extends BaseClass
 {
-	@Test
-	public void verifyMultipleAddCart() throws Exception
+	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+	public void verifyMultipleAddCart(String username, String password) throws Exception
 	{
-	    LoginPage lt = new LoginPage(driver);
-	    ConfigReader config = new ConfigReader();
+		LoginPage lt = new LoginPage(getDriver(), getWait());
 
-	    log.info("====== user is on login page ======");
 
-	    lt.login(config.username(), config.password());
+		log.info("====== user is on login page ======");
 
-	    log.info("Login successful");
 
-	    MultipleAddCartPage mp = new MultipleAddCartPage(driver);
+		lt.login(username, password);
+		log.info("Login successful");
 
-	    mp.add();
+		log.info("==== user is in Home Screen ---- MultipleAddCartTest =====");
 
-	    String count = mp.getCartCount();
-	    System.out.println("Cart Count = " + count);
+		MultipleAddCartPage mp = new MultipleAddCartPage(getDriver(), getWait());
 
-	    Assert.assertEquals(count.trim(), "2");
+		mp.add();
 
-	    mp.openCart();
+		String count = mp.getCartCount();
+		System.out.println("Cart Count = " + count);
 
-	    log.info("Two Products Added Successfully");
+		Assert.assertEquals(count.trim(), "2");
+
+		mp.openCart();
+
+		log.info("Two Products Added Successfully");
+
 	}
 }

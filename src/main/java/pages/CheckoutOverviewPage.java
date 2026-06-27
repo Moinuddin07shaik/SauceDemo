@@ -33,7 +33,7 @@ public class CheckoutOverviewPage {
     WebElement successMessage;
 
 
-    public CheckoutOverviewPage(WebDriver driver) {
+    public CheckoutOverviewPage(WebDriver driver,WebDriverWait wait) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
@@ -65,8 +65,7 @@ public class CheckoutOverviewPage {
 
         wait.until(ExpectedConditions.elementToBeClickable(finishBtn));
         finishBtn.click();
-        
-        Thread.sleep(3000);
+      
         
         getSuccessMessage();
     }

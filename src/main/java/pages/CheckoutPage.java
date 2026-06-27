@@ -26,7 +26,7 @@ public class CheckoutPage {
     @FindBy(id = "continue")
     WebElement continueBtn;
 
-    public CheckoutPage(WebDriver driver) {
+    public CheckoutPage(WebDriver driver,WebDriverWait wait) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
@@ -40,8 +40,6 @@ public class CheckoutPage {
         lastName.sendKeys(lname);
 
         postalCode.sendKeys(zip);
-        
-        Thread.sleep(3000);
 
         wait.until(ExpectedConditions.elementToBeClickable(continueBtn));
         continueBtn.click();

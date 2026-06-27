@@ -11,28 +11,31 @@ import pages.CheckoutPage;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.ViewCartPage;
-import utilites.ConfigReader;
+import utilities.DataProviders;
 
 public class LogoutTest extends BaseClass
 {
-	@Test
-	public void CheckoutOverview() throws Exception
+	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+	public void CheckoutOverview(String username, String password) throws Exception
 	{
-	    LoginPage lp = new LoginPage(driver);
-	    ConfigReader config = new ConfigReader();
+	    LoginPage lp = new LoginPage(getDriver(), getWait());
+	    lp.login(username, password);
 
-	    lp.login(config.username(), config.password());
-
-	    AddCartPage ap = new AddCartPage(driver);
+	    AddCartPage ap = new AddCartPage(getDriver(), getWait());
 	    ap.add();
 
-	    ViewCartPage vp = new ViewCartPage(driver);
+	    ViewCartPage vp = new ViewCartPage(getDriver(), getWait());
 	    vp.clickCheckout();
 
-	    CheckoutPage cp = new CheckoutPage(driver);
+	    CheckoutPage cp = new CheckoutPage(getDriver(), getWait());
 	    cp.checkoutInfo("Srinu", "Kumar", "500072");
 
-	    CheckoutOverviewPage cop = new CheckoutOverviewPage(driver);
+	    CheckoutOverviewPage cop = new CheckoutOverviewPage(getDriver(), getWait());
+	    System.out.println("Current User : " + username);
+	    System.out.println("Current URL  : " + getDriver().getCurrentUrl());
+	    System.out.println("Page Source Contains Product : " +
+	    		getDriver().getPageSource().contains("Sauce Labs Backpack"));
+
 
 	    Assert.assertEquals(cop.getProductName(), "Sauce Labs Backpack");
 	    Assert.assertEquals(cop.getProductPrice(), "$29.99");
@@ -55,21 +58,25 @@ public class LogoutTest extends BaseClass
 
 	    log.info("Order Placed Successfully");
 	    
-	    BackHomePage bp = new BackHomePage(driver);
+	    BackHomePage bp = new BackHomePage(getDriver(), getWait());
 
 	    bp.clickBackHome();
 
 	    Assert.assertTrue(
-	        driver.getCurrentUrl().contains("inventory.html"));
+	    		getDriver().getCurrentUrl().contains("inventory.html"));
 
 	    System.out.println("User navigated to Products Page");
 	    
-	    LogoutPage lp1 = new LogoutPage(driver);
+	    log.info("=======Click on menu icon ======");
+	    
+	    LogoutPage lp1 = new LogoutPage(getDriver(), getWait());
 
 	    lp1.logout();
+	    
+	    log.info("======= User Should Navigated Back to Home Screeen ======");
 
 	    Assert.assertTrue(
-	        driver.getCurrentUrl().contains("saucedemo.com"));
+	    		getDriver().getCurrentUrl().contains("saucedemo.com"));
 
 	    System.out.println("Logout Successful");
 	}

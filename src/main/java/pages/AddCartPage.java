@@ -1,7 +1,5 @@
 package pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,31 +12,29 @@ public class AddCartPage {
     WebDriver driver;
     WebDriverWait wait;
 
-    @FindBy(id="add-to-cart-sauce-labs-backpack")
+    @FindBy(id = "add-to-cart-sauce-labs-backpack")
     WebElement addcart;
-    
-    @FindBy(id="shopping_cart_container")
+
+    @FindBy(id = "shopping_cart_container")
     WebElement viewcart;
 
-    public AddCartPage(WebDriver driver) {
+    public AddCartPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
+        this.wait = wait;
         PageFactory.initElements(driver, this);
     }
 
-    public void add() throws Exception {
+    public void add() {
 
         wait.until(ExpectedConditions.elementToBeClickable(addcart));
         addcart.click();
-        
-        Thread.sleep(3000);
+        System.out.println("Product added to cart");
 
         wait.until(ExpectedConditions.elementToBeClickable(viewcart));
         viewcart.click();
-        
-        Thread.sleep(3000);
 
         wait.until(ExpectedConditions.urlContains("cart.html"));
+
+        System.out.println("Navigated to cart page: " + driver.getCurrentUrl());
     }
 }

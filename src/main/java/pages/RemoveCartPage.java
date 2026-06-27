@@ -17,7 +17,7 @@ public class RemoveCartPage
     @FindBy(id="remove-sauce-labs-backpack")
     WebElement removeBtn;
 
-    public RemoveCartPage(WebDriver driver)
+    public RemoveCartPage(WebDriver driver,WebDriverWait wait)
     {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));

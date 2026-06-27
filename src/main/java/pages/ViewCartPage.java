@@ -17,7 +17,7 @@ public class ViewCartPage {
 	@FindBy(id = "checkout")
 	WebElement checkoutBtn;
 
-	public ViewCartPage(WebDriver driver) {
+	public ViewCartPage(WebDriver driver,WebDriverWait wait) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		PageFactory.initElements(driver, this);

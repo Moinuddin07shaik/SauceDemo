@@ -20,7 +20,7 @@ public class LogoutPage
     @FindBy(id="logout_sidebar_link")
     WebElement logoutBtn;
 
-    public LogoutPage(WebDriver driver)
+    public LogoutPage(WebDriver driver,WebDriverWait wait)
     {
         this.driver = driver;
         PageFactory.initElements(driver, this);
