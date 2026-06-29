@@ -3,38 +3,43 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
-
 import base.BaseClass;
 import pages.AddCartPage;
 import pages.LoginPage;
 import utilities.DataProviders;
 
+public class AddCartTest extends BaseClass {
 
-public class AddCartTest extends BaseClass
-{
-
-	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
-	public void login(String username, String password) throws Exception 
-	{
-		LoginPage lt = new LoginPage(getDriver(), getWait());
+    @Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+    public void addToCartTest(String username, String password) {
 
 
-		log.info("====== User is on Login Page ======");
+        LoginPage loginPage = new LoginPage(getDriver());
 
-		lt.login(username, password);
-		
-		Assert.assertTrue(getDriver().getCurrentUrl().contains("inventory"));
+        AddCartPage addCartPage = new AddCartPage(getDriver());
 
-		log.info("Login attempted with user: " + username);
-		log.info("==== user is in Home Screen ---- AddCartTest =====");
 
-		AddCartPage ad = new AddCartPage(getDriver(), getWait());
-		ad.add();
+        log.info("User is on Login Page");
 
-		
-		log.info("items is displayed in after view Cart ---- AddCartTest");
 
-	}
+        loginPage.login(username, password);
 
+
+        log.info("Login attempted with user: " + username);
+
+
+        Assert.assertTrue(
+                getDriver().getCurrentUrl().contains("inventory.html"),
+                "Login failed for user: " + username
+        );
+
+
+        log.info("User is on Inventory Page - Starting Add to Cart flow");
+
+
+        addCartPage.addProductToCart();
+
+
+        log.info("Item added and cart opened successfully");
+    }
 }

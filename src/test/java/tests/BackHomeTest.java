@@ -12,59 +12,99 @@ import pages.LoginPage;
 import pages.ViewCartPage;
 import utilities.DataProviders;
 
-public class BackHomeTest extends BaseClass
-{
-	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
-	public void CheckoutOverview(String username, String password) throws Exception
-	{
-	    LoginPage lp = new LoginPage(getDriver(), getWait());
-	    lp.login(username, password);
-	    
+public class BackHomeTest extends BaseClass {
 
-	    AddCartPage ap = new AddCartPage(getDriver(), getWait());
-	    ap.add();
+    @Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
+    public void endToEndCheckoutTest(String username, String password) throws Exception {
 
-	    ViewCartPage vp = new ViewCartPage(getDriver(), getWait());
-	    vp.clickCheckout();
 
-	    CheckoutPage cp = new CheckoutPage(getDriver(), getWait());
-	    cp.checkoutInfo("Srinu", "Kumar", "500072");
+        LoginPage loginPage = new LoginPage(getDriver());
 
-	    CheckoutOverviewPage cop = new CheckoutOverviewPage(getDriver(), getWait());
+        AddCartPage addCartPage = new AddCartPage(getDriver());
 
-	    Assert.assertEquals(cop.getProductName(), "Sauce Labs Backpack");
-	    Assert.assertEquals(cop.getProductPrice(), "$29.99");
-	    Assert.assertEquals(cop.getPaymentInfo(), "SauceCard #31337");
+        ViewCartPage viewCartPage = new ViewCartPage(getDriver());
 
-	    System.out.println("Product Name : " + cop.getProductName());
-	    System.out.println("Product Price : " + cop.getProductPrice());
-	    System.out.println("Payment Info : " + cop.getPaymentInfo());
-	    System.out.println("Total Price : " + cop.getTotalPrice());
+        CheckoutPage checkoutPage = new CheckoutPage(getDriver());
 
-	    cop.clickFinish();
+        CheckoutOverviewPage overview =
+                new CheckoutOverviewPage(getDriver());
 
-	    // Success Message Verification
-	    String actualMessage = cop.getSuccessMessage();
+        BackHomePage backHomePage = new BackHomePage(getDriver());
 
-	    System.out.println("Order Status : " + actualMessage);
 
-	    Assert.assertEquals(actualMessage,
-	            "Thank you for your order!");
+        log.info("User login started");
 
-	    log.info("Order Placed Successfully for prodcut .... Back Home page");
-	    
-	    BackHomePage bp = new BackHomePage(getDriver(), getWait());
-	    
-	    log.info(" ======= Navigating back to Home Screen Started =====");
 
-	    bp.clickBackHome();
-	    
-	    log.info(" ======= Navigating back to Home Screen Started =====");
+        loginPage.login(username, password);
 
-	    Assert.assertTrue(
-	    	    getDriver().getCurrentUrl().contains("inventory.html")
-	    	);
 
-	    System.out.println("User navigated to Products Page");
-	}
+        Assert.assertTrue(
+                getDriver().getCurrentUrl().contains("inventory.html"),
+                "Login failed for user: " + username
+        );
+
+
+        log.info("Adding product to cart");
+
+
+        addCartPage.addProductToCart();
+
+
+        log.info("Navigating to cart and checkout");
+
+
+        viewCartPage.clickCheckout();
+
+
+        checkoutPage.checkoutInfo(
+                "Srinu",
+                "Kumar",
+                "500072"
+        );
+
+
+		Assert.assertEquals(
+				overview.getProductName(),
+                "Sauce Labs Backpack"
+        );
+
+
+        Assert.assertEquals(
+        		overview.getProductPrice(),
+                "$29.99"
+        );
+
+
+        Assert.assertEquals(
+        		overview.getPaymentInfo(),
+                "SauceCard #31337"
+        );
+
+
+        log.info("Order summary validated");
+
+
+        overview.clickFinish();
+
+
+        Assert.assertEquals(
+        		overview.getSuccessMessage(),
+                "Thank you for your order!"
+        );
+
+
+        log.info("Order placed successfully");
+
+
+        backHomePage.clickBackHome();
+
+
+        Assert.assertTrue(
+                getDriver().getCurrentUrl().contains("inventory.html"),
+                "User not navigated back to home page"
+        );
+
+
+        log.info("User successfully returned to home page");
+    }
 }

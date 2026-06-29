@@ -18,19 +18,19 @@ public class LogoutTest extends BaseClass
 	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
 	public void CheckoutOverview(String username, String password) throws Exception
 	{
-	    LoginPage lp = new LoginPage(getDriver(), getWait());
+	    LoginPage lp = new LoginPage(getDriver());
 	    lp.login(username, password);
 
-	    AddCartPage ap = new AddCartPage(getDriver(), getWait());
-	    ap.add();
+	    AddCartPage ap = new AddCartPage(getDriver());
+	    ap.addProductToCart();;
 
-	    ViewCartPage vp = new ViewCartPage(getDriver(), getWait());
+	    ViewCartPage vp = new ViewCartPage(getDriver());
 	    vp.clickCheckout();
 
-	    CheckoutPage cp = new CheckoutPage(getDriver(), getWait());
+	    CheckoutPage cp = new CheckoutPage(getDriver());
 	    cp.checkoutInfo("Srinu", "Kumar", "500072");
 
-	    CheckoutOverviewPage cop = new CheckoutOverviewPage(getDriver(), getWait());
+	    CheckoutOverviewPage cop = new CheckoutOverviewPage(getDriver());
 	    System.out.println("Current User : " + username);
 	    System.out.println("Current URL  : " + getDriver().getCurrentUrl());
 	    System.out.println("Page Source Contains Product : " +
@@ -44,7 +44,7 @@ public class LogoutTest extends BaseClass
 	    System.out.println("Product Name : " + cop.getProductName());
 	    System.out.println("Product Price : " + cop.getProductPrice());
 	    System.out.println("Payment Info : " + cop.getPaymentInfo());
-	    System.out.println("Total Price : " + cop.getTotalPrice());
+	   // System.out.println("Total Price : " + cop.getTotalPrice());
 
 	    cop.clickFinish();
 
@@ -58,7 +58,7 @@ public class LogoutTest extends BaseClass
 
 	    log.info("Order Placed Successfully");
 	    
-	    BackHomePage bp = new BackHomePage(getDriver(), getWait());
+	    BackHomePage bp = new BackHomePage(getDriver());
 
 	    bp.clickBackHome();
 

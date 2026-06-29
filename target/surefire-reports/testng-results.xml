@@ -2,243 +2,340 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-26T19:53:08 IST" name="ecommerce" finished-at="2026-06-27T16:41:20 IST" duration-ms="74892522">
+  <suite started-at="2026-06-29T22:41:01 IST" name="ecommerce" finished-at="2026-06-29T22:43:29 IST" duration-ms="147979">
     <groups>
     </groups>
-    <test started-at="2026-06-26T19:53:08 IST" name="Test1" finished-at="2026-06-27T16:41:20 IST" duration-ms="74892522">
+    <test started-at="2026-06-29T22:41:01 IST" name="Firefox" finished-at="2026-06-29T22:43:29 IST" duration-ms="147979">
       <class name="tests.RemoveCartTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.RemoveCartTest@45905bff]" started-at="2026-06-26T19:53:59 IST" name="Launchbrowser" finished-at="2026-06-26T19:54:07 IST" duration-ms="7907" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.RemoveCartTest@1522d8a0]" started-at="2026-06-29T22:41:42 IST" name="launchBrowser" finished-at="2026-06-29T22:41:49 IST" duration-ms="7938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="removeCartTest()[pri:0, instance:tests.RemoveCartTest@45905bff]" started-at="2026-06-26T19:54:07 IST" name="removeCartTest" finished-at="2026-06-26T19:54:15 IST" duration-ms="8150" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="removeCartTest(java.lang.String,java.lang.String)[pri:0, instance:tests.RemoveCartTest@1522d8a0]" started-at="2026-06-29T22:41:49 IST" name="removeCartTest" data-provider="loginData" finished-at="2026-06-29T22:41:51 IST" duration-ms="1064" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeCartTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RemoveCartTest@45905bff]" started-at="2026-06-26T19:54:15 IST" name="tearDown" finished-at="2026-06-26T19:54:17 IST" duration-ms="1755" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RemoveCartTest@1522d8a0]" started-at="2026-06-29T22:41:51 IST" name="tearDown" finished-at="2026-06-29T22:41:53 IST" duration-ms="2748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.RemoveCartTest -->
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.LoginTest@5c8504fd]" started-at="2026-06-26T19:53:08 IST" name="Launchbrowser" finished-at="2026-06-26T19:53:14 IST" duration-ms="6618" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.LoginTest@1c3146bc]" started-at="2026-06-29T22:41:01 IST" name="launchBrowser" finished-at="2026-06-29T22:41:16 IST" duration-ms="15184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="login()[pri:0, instance:tests.LoginTest@5c8504fd]" started-at="2026-06-26T19:53:15 IST" name="login" finished-at="2026-06-26T19:53:15 IST" duration-ms="908" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@1c3146bc]" started-at="2026-06-29T22:41:16 IST" name="loginTest" data-provider="loginData" finished-at="2026-06-29T22:41:17 IST" duration-ms="752" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@5c8504fd]" started-at="2026-06-26T19:53:16 IST" name="tearDown" finished-at="2026-06-26T19:53:18 IST" duration-ms="2249" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@1c3146bc]" started-at="2026-06-29T22:41:17 IST" name="tearDown" finished-at="2026-06-29T22:41:19 IST" duration-ms="1515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.AddCartTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.AddCartTest@72ea6193]" started-at="2026-06-26T19:53:18 IST" name="Launchbrowser" finished-at="2026-06-26T19:53:26 IST" duration-ms="8285" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.AddCartTest@7ec3394b]" started-at="2026-06-29T22:41:19 IST" name="launchBrowser" finished-at="2026-06-29T22:41:27 IST" duration-ms="8640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="login()[pri:0, instance:tests.AddCartTest@72ea6193]" started-at="2026-06-26T19:53:26 IST" name="login" finished-at="2026-06-26T19:53:35 IST" duration-ms="9152" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="addToCartTest(java.lang.String,java.lang.String)[pri:0, instance:tests.AddCartTest@7ec3394b]" started-at="2026-06-29T22:41:27 IST" name="addToCartTest" data-provider="loginData" finished-at="2026-06-29T22:41:28 IST" duration-ms="898" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddCartTest@72ea6193]" started-at="2026-06-26T19:53:35 IST" name="tearDown" finished-at="2026-06-26T19:53:37 IST" duration-ms="2143" status="PASS">
+        </test-method> <!-- addToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AddCartTest@7ec3394b]" started-at="2026-06-29T22:41:28 IST" name="tearDown" finished-at="2026-06-29T22:41:30 IST" duration-ms="2313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.AddCartTest -->
       <class name="tests.ViewCartTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.ViewCartTest@b6b1987]" started-at="2026-06-26T19:54:33 IST" name="Launchbrowser" finished-at="2026-06-26T19:54:39 IST" duration-ms="6281" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.ViewCartTest@5644dc81]" started-at="2026-06-29T22:42:05 IST" name="launchBrowser" finished-at="2026-06-29T22:42:11 IST" duration-ms="6023" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="view()[pri:0, instance:tests.ViewCartTest@b6b1987]" started-at="2026-06-26T19:54:39 IST" name="view" finished-at="2026-06-26T19:54:53 IST" duration-ms="13955" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="view(java.lang.String,java.lang.String)[pri:0, instance:tests.ViewCartTest@5644dc81]" started-at="2026-06-29T22:42:11 IST" name="view" data-provider="loginData" finished-at="2026-06-29T22:42:18 IST" duration-ms="7054" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- view -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ViewCartTest@b6b1987]" started-at="2026-06-26T19:54:53 IST" name="tearDown" finished-at="2026-06-27T16:38:22 IST" duration-ms="74609330" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[Timed out waiting for driver server to stop.
-Build info: version: '4.45.0', revision: 'cd6a3cd cd6a3cdfca6970f62e5bc8344109d0fe0e2af05e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.3'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f580c3b0-aa92-4084-a368-c4e3767bdbed, quit {}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0, moz:accessibilityChecks: false, moz:buildID: 20240606181944, moz:geckodriverVersion: 0.37.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4604, moz:profile: C:\Windows\SystemTemp\rust_..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: f580c3b0-aa92-4084-a368-c4e3767bdbed]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.45.0', revision: 'cd6a3cd cd6a3cdfca6970f62e5bc8344109d0fe0e2af05e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.3'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [f580c3b0-aa92-4084-a368-c4e3767bdbed, quit {}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0, moz:accessibilityChecks: false, moz:buildID: 20240606181944, moz:geckodriverVersion: 0.37.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4604, moz:profile: C:\Windows\SystemTemp\rust_..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: f580c3b0-aa92-4084-a368-c4e3767bdbed
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:165)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:575)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:661)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:474)
-at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:278)
-at base.BaseClass.tearDown(BaseClass.java:55)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:815)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:791)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.io.IOException: closed
-at java.base/java.util.concurrent.CompletableFuture.wrapInExecutionException(CompletableFuture.java:345)
-at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:440)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2117)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
-... 41 more
-Caused by: java.io.UncheckedIOException: java.io.IOException: closed
-at org.openqa.selenium.remote.http.jdk.JdkHttpMessages.readResponseBody(JdkHttpMessages.java:194)
-at org.openqa.selenium.remote.http.jdk.JdkHttpMessages.extractContent(JdkHttpMessages.java:179)
-at org.openqa.selenium.remote.http.jdk.JdkHttpMessages.createResponse(JdkHttpMessages.java:153)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:488)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:46)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$0(Filter.java:55)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$0(JdkHttpClient.java:399)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-at java.base/java.lang.Thread.run(Thread.java:1474)
-Caused by: java.io.IOException: closed
-at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.current(ResponseSubscribers.java:359)
-at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.read(ResponseSubscribers.java:419)
-at java.base/java.io.InputStream.read(InputStream.java:222)
-at org.openqa.selenium.io.Read.toByteArray(Read.java:46)
-at org.openqa.selenium.remote.http.jdk.JdkHttpMessages.readResponseBody(JdkHttpMessages.java:192)
-... 11 more
-Caused by: java.net.http.HttpTimeoutException: request timed out
-at java.net.http/jdk.internal.net.http.ResponseTimerEvent.handle(ResponseTimerEvent.java:63)
-at java.net.http/jdk.internal.net.http.HttpClientImpl.purgeTimeoutsAndReturnNextDeadline(HttpClientImpl.java:1751)
-at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1307)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ViewCartTest@5644dc81]" started-at="2026-06-29T22:42:18 IST" name="tearDown" finished-at="2026-06-29T22:42:20 IST" duration-ms="2470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.ViewCartTest -->
       <class name="tests.BackHomeTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.BackHomeTest@66b7550d]" started-at="2026-06-27T16:39:30 IST" name="Launchbrowser" finished-at="2026-06-27T16:39:38 IST" duration-ms="8419" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.BackHomeTest@4351c8c3]" started-at="2026-06-29T22:42:52 IST" name="launchBrowser" finished-at="2026-06-29T22:42:59 IST" duration-ms="6983" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="CheckoutOverview()[pri:0, instance:tests.BackHomeTest@66b7550d]" started-at="2026-06-27T16:39:38 IST" name="CheckoutOverview" finished-at="2026-06-27T16:40:09 IST" duration-ms="30225" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="endToEndCheckoutTest(java.lang.String,java.lang.String)[pri:0, instance:tests.BackHomeTest@4351c8c3]" started-at="2026-06-29T22:42:59 IST" name="endToEndCheckoutTest" data-provider="loginData" finished-at="2026-06-29T22:43:08 IST" duration-ms="8178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckoutOverview -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BackHomeTest@66b7550d]" started-at="2026-06-27T16:40:09 IST" name="tearDown" finished-at="2026-06-27T16:40:36 IST" duration-ms="27874" status="PASS">
+        </test-method> <!-- endToEndCheckoutTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BackHomeTest@4351c8c3]" started-at="2026-06-29T22:43:08 IST" name="tearDown" finished-at="2026-06-29T22:43:09 IST" duration-ms="1017" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.BackHomeTest -->
       <class name="tests.ContinueShoppingTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.ContinueShoppingTest@2a2c13a8]" started-at="2026-06-26T19:54:17 IST" name="Launchbrowser" finished-at="2026-06-26T19:54:22 IST" duration-ms="5386" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.ContinueShoppingTest@312ab28e]" started-at="2026-06-29T22:41:53 IST" name="launchBrowser" finished-at="2026-06-29T22:42:00 IST" duration-ms="7074" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="login()[pri:0, instance:tests.ContinueShoppingTest@2a2c13a8]" started-at="2026-06-26T19:54:22 IST" name="login" finished-at="2026-06-26T19:54:31 IST" duration-ms="8623" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:tests.ContinueShoppingTest@312ab28e]" started-at="2026-06-29T22:42:00 IST" name="login" data-provider="loginData" finished-at="2026-06-29T22:42:02 IST" duration-ms="1869" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ContinueShoppingTest@2a2c13a8]" started-at="2026-06-26T19:54:31 IST" name="tearDown" finished-at="2026-06-26T19:54:33 IST" duration-ms="2064" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ContinueShoppingTest@312ab28e]" started-at="2026-06-29T22:42:02 IST" name="tearDown" finished-at="2026-06-29T22:42:05 IST" duration-ms="2311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.ContinueShoppingTest -->
       <class name="tests.CheckoutOverviewTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.CheckoutOverviewTest@2ccca26f]" started-at="2026-06-27T16:39:01 IST" name="Launchbrowser" finished-at="2026-06-27T16:39:08 IST" duration-ms="7369" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.CheckoutOverviewTest@278bb07e]" started-at="2026-06-29T22:42:36 IST" name="launchBrowser" finished-at="2026-06-29T22:42:43 IST" duration-ms="7270" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="CheckoutOverview()[pri:0, instance:tests.CheckoutOverviewTest@2ccca26f]" started-at="2026-06-27T16:39:08 IST" name="CheckoutOverview" finished-at="2026-06-27T16:39:29 IST" duration-ms="20504" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="CheckoutOverview(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutOverviewTest@278bb07e]" started-at="2026-06-29T22:42:43 IST" name="CheckoutOverview" data-provider="loginData" finished-at="2026-06-29T22:42:51 IST" duration-ms="8211" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckoutOverview -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutOverviewTest@2ccca26f]" started-at="2026-06-27T16:39:29 IST" name="tearDown" finished-at="2026-06-27T16:39:30 IST" duration-ms="1355" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutOverviewTest@278bb07e]" started-at="2026-06-29T22:42:51 IST" name="tearDown" finished-at="2026-06-29T22:42:52 IST" duration-ms="1033" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CheckoutOverviewTest -->
       <class name="tests.CheckoutTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.CheckoutTest@6b44435b]" started-at="2026-06-27T16:38:23 IST" name="Launchbrowser" finished-at="2026-06-27T16:38:40 IST" duration-ms="16762" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.CheckoutTest@246f8b8b]" started-at="2026-06-29T22:42:20 IST" name="launchBrowser" finished-at="2026-06-29T22:42:27 IST" duration-ms="7108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="checkout()[pri:0, instance:tests.CheckoutTest@6b44435b]" started-at="2026-06-27T16:38:40 IST" name="checkout" finished-at="2026-06-27T16:38:58 IST" duration-ms="18370" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="checkout(java.lang.String,java.lang.String)[pri:0, instance:tests.CheckoutTest@246f8b8b]" started-at="2026-06-29T22:42:27 IST" name="checkout" data-provider="loginData" finished-at="2026-06-29T22:42:35 IST" duration-ms="7556" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutTest@6b44435b]" started-at="2026-06-27T16:38:58 IST" name="tearDown" finished-at="2026-06-27T16:39:01 IST" duration-ms="2323" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CheckoutTest@246f8b8b]" started-at="2026-06-29T22:42:35 IST" name="tearDown" finished-at="2026-06-29T22:42:36 IST" duration-ms="1104" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CheckoutTest -->
       <class name="tests.LogoutTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.LogoutTest@3543df7d]" started-at="2026-06-27T16:40:36 IST" name="Launchbrowser" finished-at="2026-06-27T16:40:43 IST" duration-ms="6974" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.LogoutTest@3381b4fc]" started-at="2026-06-29T22:43:09 IST" name="launchBrowser" finished-at="2026-06-29T22:43:15 IST" duration-ms="6513" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="CheckoutOverview()[pri:0, instance:tests.LogoutTest@3543df7d]" started-at="2026-06-27T16:40:43 IST" name="CheckoutOverview" finished-at="2026-06-27T16:41:15 IST" duration-ms="31177" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="CheckoutOverview(java.lang.String,java.lang.String)[pri:0, instance:tests.LogoutTest@3381b4fc]" started-at="2026-06-29T22:43:15 IST" name="CheckoutOverview" data-provider="loginData" finished-at="2026-06-29T22:43:27 IST" duration-ms="12314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckoutOverview -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LogoutTest@3543df7d]" started-at="2026-06-27T16:41:15 IST" name="tearDown" finished-at="2026-06-27T16:41:20 IST" duration-ms="5452" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LogoutTest@3381b4fc]" started-at="2026-06-29T22:43:27 IST" name="tearDown" finished-at="2026-06-29T22:43:29 IST" duration-ms="1152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LogoutTest -->
       <class name="tests.MultipleAddCartTest">
-        <test-method is-config="true" signature="Launchbrowser()[pri:0, instance:tests.MultipleAddCartTest@31aa3ca5]" started-at="2026-06-26T19:53:37 IST" name="Launchbrowser" finished-at="2026-06-26T19:53:45 IST" duration-ms="7750" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.MultipleAddCartTest@bff34c6]" started-at="2026-06-29T22:41:30 IST" name="launchBrowser" finished-at="2026-06-29T22:41:38 IST" duration-ms="7706" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Launchbrowser -->
-        <test-method signature="verifyMultipleAddCart()[pri:0, instance:tests.MultipleAddCartTest@31aa3ca5]" started-at="2026-06-26T19:53:45 IST" name="verifyMultipleAddCart" finished-at="2026-06-26T19:53:57 IST" duration-ms="12301" status="PASS">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="verifyMultipleAddCart(java.lang.String,java.lang.String)[pri:0, instance:tests.MultipleAddCartTest@bff34c6]" started-at="2026-06-29T22:41:38 IST" name="verifyMultipleAddCart" data-provider="loginData" finished-at="2026-06-29T22:41:39 IST" duration-ms="1096" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMultipleAddCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.MultipleAddCartTest@31aa3ca5]" started-at="2026-06-26T19:53:57 IST" name="tearDown" finished-at="2026-06-26T19:53:59 IST" duration-ms="1529" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.MultipleAddCartTest@bff34c6]" started-at="2026-06-29T22:41:39 IST" name="tearDown" finished-at="2026-06-29T22:41:42 IST" duration-ms="2273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.MultipleAddCartTest -->
-    </test> <!-- Test1 -->
+    </test> <!-- Firefox -->
   </suite> <!-- ecommerce -->
 </testng-results>

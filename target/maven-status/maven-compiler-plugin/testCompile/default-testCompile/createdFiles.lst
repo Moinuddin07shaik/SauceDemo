@@ -1,10 +1,11 @@
 tests\CheckoutOverviewTest.class
-tests\LogoutTest.class
 tests\CheckoutTest.class
-tests\AddCartTest.class
+listeners\TestListener.class
 tests\BackHomeTest.class
 tests\ViewCartTest.class
-tests\ContinueShoppingTest.class
 tests\LoginTest.class
+tests\LogoutTest.class
+tests\AddCartTest.class
+tests\ContinueShoppingTest.class
 tests\RemoveCartTest.class
 tests\MultipleAddCartTest.class

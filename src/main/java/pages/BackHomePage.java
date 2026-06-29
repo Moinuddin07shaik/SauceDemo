@@ -9,28 +9,22 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BackHomePage
-{
+public class BackHomePage {
+
     WebDriver driver;
     WebDriverWait wait;
 
-    @FindBy(id="back-to-products")
+    @FindBy(id = "back-to-products")
     WebElement backHomeBtn;
 
-    public BackHomePage(WebDriver driver,WebDriverWait wait)
-    {
+    public BackHomePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        PageFactory.initElements(driver, this);
     }
 
-   
-
-	public void clickBackHome() throws InterruptedException
-    {
-    	wait.until(ExpectedConditions.elementToBeClickable(backHomeBtn));
+    public void clickBackHome() {
+        wait.until(ExpectedConditions.elementToBeClickable(backHomeBtn));
         backHomeBtn.click();
-        
-        Thread.sleep(4000);
     }
 }

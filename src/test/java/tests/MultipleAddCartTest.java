@@ -1,6 +1,6 @@
 package tests;
 
-
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,34 +9,49 @@ import pages.LoginPage;
 import pages.MultipleAddCartPage;
 import utilities.DataProviders;
 
-public class MultipleAddCartTest extends BaseClass
-{
+public class MultipleAddCartTest extends BaseClass {
+
 	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
-	public void verifyMultipleAddCart(String username, String password) throws Exception
-	{
-		LoginPage lt = new LoginPage(getDriver(), getWait());
+	public void verifyMultipleAddCart(String username, String password) {
 
+	    WebDriver driver = getDriver();
 
-		log.info("====== user is on login page ======");
+	    LoginPage loginPage = new LoginPage(driver);
+	    MultipleAddCartPage cartPage = new MultipleAddCartPage(driver);
 
+	    log.info("====== Login Test Started ======");
 
-		lt.login(username, password);
-		log.info("Login successful");
+	    loginPage.login(username, password);
 
-		log.info("==== user is in Home Screen ---- MultipleAddCartTest =====");
+	    log.info("Login attempted for user: " + username);
 
-		MultipleAddCartPage mp = new MultipleAddCartPage(getDriver(), getWait());
+	    Assert.assertTrue(
+	            driver.getCurrentUrl().contains("inventory.html"),
+	            "Login failed for user: " + username +
+	            " | Current URL: " + driver.getCurrentUrl()
+	    );
 
-		mp.add();
+	    log.info("Login successful - Inventory Page opened");
 
-		String count = mp.getCartCount();
-		System.out.println("Cart Count = " + count);
+	    cartPage.addBackpack();
+	    cartPage.addBikeLight();
+	    int cartCount = cartPage.getCartCount();
 
-		Assert.assertEquals(count.trim(), "2");
+	    log.info("Cart Count after adding products: " + cartCount);
 
-		mp.openCart();
+	    Assert.assertEquals(
+	            cartCount,
+	            2,
+	            "Cart count mismatch! Expected: 2 | Actual: " + cartCount
+	    );
+	    
+	    cartPage.openCart();
 
-		log.info("Two Products Added Successfully");
+	    Assert.assertTrue(
+	            driver.getCurrentUrl().contains("cart.html"),
+	            "Cart page not opened properly"
+	    );
 
+	    log.info("Cart opened successfully with 2 products");
 	}
 }

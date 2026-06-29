@@ -4,37 +4,35 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.ActionUtils;
 
 public class AddCartPage {
 
     WebDriver driver;
-    WebDriverWait wait;
+    ActionUtils action;
 
-    @FindBy(id = "add-to-cart-sauce-labs-backpack")
-    WebElement addcart;
-
-    @FindBy(id = "shopping_cart_container")
-    WebElement viewcart;
-
-    public AddCartPage(WebDriver driver, WebDriverWait wait) {
+    public AddCartPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = wait;
+        this.action = new ActionUtils(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public void add() {
+    @FindBy(id = "add-to-cart-sauce-labs-backpack")
+    WebElement addCartBtn;
 
-        wait.until(ExpectedConditions.elementToBeClickable(addcart));
-        addcart.click();
-        System.out.println("Product added to cart");
+    @FindBy(id = "shopping_cart_container")
+    WebElement viewCartBtn;
 
-        wait.until(ExpectedConditions.elementToBeClickable(viewcart));
-        viewcart.click();
+    public void addProductToCart() {
 
-        wait.until(ExpectedConditions.urlContains("cart.html"));
+        action.click(addCartBtn);
+        action.click(viewCartBtn);
+
+        action.waitUrlContains("cart.html");
 
         System.out.println("Navigated to cart page: " + driver.getCurrentUrl());
     }
+
+	
 }

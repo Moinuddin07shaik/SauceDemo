@@ -15,7 +15,7 @@ public class CheckoutTest extends BaseClass {
 	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
 	public void checkout(String username, String password) throws Exception {
 
-		LoginPage lp = new LoginPage(getDriver(), getWait());
+		LoginPage lp = new LoginPage(getDriver());
 		lp.login(username, password);
 
 
@@ -23,17 +23,17 @@ public class CheckoutTest extends BaseClass {
 
 		log.info("Login Successful");
 
-		AddCartPage ap = new AddCartPage(getDriver(), getWait());
-		ap.add();
+		AddCartPage ap = new AddCartPage(getDriver());
+		ap.addProductToCart();
 
 		log.info("Product Added To Cart");
 
-		ViewCartPage vp = new ViewCartPage(getDriver(), getWait());
+		ViewCartPage vp = new ViewCartPage(getDriver());
 		vp.clickCheckout();
 
 		log.info("Checkout Button Clicked");
 
-		CheckoutPage cp = new CheckoutPage(getDriver(), getWait());
+		CheckoutPage cp = new CheckoutPage(getDriver());
 
 		cp.checkoutInfo("Srinu", "Kumar", "500072");
 

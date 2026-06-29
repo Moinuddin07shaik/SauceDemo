@@ -38,23 +38,13 @@ public class BaseClass {
 
     @Parameters("browser")
     @BeforeMethod
-    public void launchBrowser(@Optional("chrome") String browser) {
+    public void launchBrowser(@Optional("firefox") String browser) {
 
         WebDriver localDriver;
 
         if (browser.equalsIgnoreCase("chrome")) {
 
-            ChromeOptions options = new ChromeOptions();
-
-            Map<String, Object> prefs = new HashMap<>();
-            prefs.put("profile.default_content_setting_values.notifications", 2);
-            prefs.put("credentials_enable_service", false);
-            prefs.put("profile.password_manager_enabled", false);
-
-            options.setExperimentalOption("prefs", prefs);
-            options.addArguments("--disable-notifications");
-
-            localDriver = new ChromeDriver(options);
+            localDriver = new ChromeDriver();
 
         } else if (browser.equalsIgnoreCase("firefox")) {
             localDriver = new FirefoxDriver();

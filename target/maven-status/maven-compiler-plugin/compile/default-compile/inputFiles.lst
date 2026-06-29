@@ -9,4 +9,9 @@ F:\java\project1\src\main\java\pages\LogoutPage.java
 F:\java\project1\src\main\java\pages\MultipleAddCartPage.java
 F:\java\project1\src\main\java\pages\RemoveCartPage.java
 F:\java\project1\src\main\java\pages\ViewCartPage.java
-F:\java\project1\src\main\java\utilites\ConfigReader.java
+F:\java\project1\src\main\java\utilities\ActionUtils.java
+F:\java\project1\src\main\java\utilities\ConfigReader.java
+F:\java\project1\src\main\java\utilities\DataProviders.java
+F:\java\project1\src\main\java\utilities\ElementNotFoundException.java
+F:\java\project1\src\main\java\utilities\ScreenshotUtil.java
+F:\java\project1\src\main\java\utilities\SeleniumFrameworkException.java

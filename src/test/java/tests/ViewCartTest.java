@@ -16,7 +16,7 @@ public class ViewCartTest extends BaseClass
     @Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
     public void view(String username, String password) throws Exception
     {
-        LoginPage lt = new LoginPage(getDriver(), getWait());
+        LoginPage lt = new LoginPage(getDriver());
         lt.login(username, password);
         
 
@@ -25,11 +25,11 @@ public class ViewCartTest extends BaseClass
        
         log.info("Login successful");
 
-        AddCartPage ad = new AddCartPage(getDriver(), getWait());
+        AddCartPage ad = new AddCartPage(getDriver());
 
         log.info("====== add item to cart ViewCart ==========");
 
-        ad.add();
+        ad.addProductToCart();;
 
         Assert.assertTrue(
         		getDriver().getCurrentUrl().contains("cart.html"),
@@ -37,7 +37,7 @@ public class ViewCartTest extends BaseClass
 
         log.info("Cart page opened successfully");
 
-        ViewCartPage vcp = new ViewCartPage(getDriver(), getWait());
+        ViewCartPage vcp = new ViewCartPage(getDriver());
 
         vcp.clickCheckout();
 

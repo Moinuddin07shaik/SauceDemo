@@ -17,14 +17,14 @@ public class RemoveCartTest extends BaseClass
 	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class)
 	public void removeCartTest(String username, String password) throws Exception
 	{
-		LoginPage lp = new LoginPage(getDriver(), getWait());
+		LoginPage lp = new LoginPage(getDriver());
 		lp.login(username, password);
 
 
 		log.info("=========  Remove Cart items ============");
 
-		AddCartPage ad = new AddCartPage(getDriver(), getWait());
-		ad.add();
+		AddCartPage ad = new AddCartPage(getDriver());
+		ad.addProductToCart();
 
 		Assert.assertTrue(
 				getDriver().getCurrentUrl().contains("cart.html"),

@@ -16,14 +16,14 @@ public class ContinueShoppingTest extends BaseClass
 	@Test(dataProvider = "loginData",dataProviderClass = DataProviders.class)
 	public void login(String username, String password) throws Exception
 	{
-		LoginPage lt = new LoginPage(getDriver(), getWait());
+		LoginPage lt = new LoginPage(getDriver());
 		lt.login(username, password);
 
 		
 		log.info(" ======= Add to cart page this =========");
 
-		AddCartPage ad = new AddCartPage(getDriver(), getWait());
-		ad.add();
+		AddCartPage ad = new AddCartPage(getDriver());
+		ad.addProductToCart();
 
 		Assert.assertTrue(
 				getDriver().getCurrentUrl().contains("cart.html"),
