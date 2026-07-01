@@ -1880,3 +1880,66 @@
 2026-06-29 22:43:23 INFO  BaseClass:70 - =======Click on menu icon ======
 2026-06-29 22:43:27 INFO  BaseClass:76 - ======= User Should Navigated Back to Home Screeen ======
 2026-06-29 22:43:29 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:22:26 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:22:27 INFO  BaseClass:17 - ====== User is on Login Page ======
+2026-07-01 16:22:28 INFO  BaseClass:21 - Login attempted with user: standard_user
+2026-07-01 16:22:28 INFO  BaseClass:25 - Current URL after login: https://www.saucedemo.com/inventory.html
+2026-07-01 16:22:28 INFO  BaseClass:34 - Login successful for user: standard_user
+2026-07-01 16:22:29 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:22:33 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:22:33 INFO  BaseClass:22 - User is on Login Page
+2026-07-01 16:22:34 INFO  BaseClass:28 - Login attempted with user: standard_user
+2026-07-01 16:22:34 INFO  BaseClass:37 - User is on Inventory Page - Starting Add to Cart flow
+2026-07-01 16:22:34 INFO  BaseClass:43 - Item added and cart opened successfully
+2026-07-01 16:22:35 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:22:39 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:22:39 INFO  BaseClass:22 - ====== Login Test Started ======
+2026-07-01 16:22:40 INFO  BaseClass:26 - Login attempted for user: standard_user
+2026-07-01 16:22:40 INFO  BaseClass:34 - Login successful - Inventory Page opened
+2026-07-01 16:22:40 INFO  BaseClass:40 - Cart Count after adding products: 2
+2026-07-01 16:22:41 INFO  BaseClass:55 - Cart opened successfully with 2 products
+2026-07-01 16:22:41 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:22:44 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:22:45 INFO  BaseClass:24 - =========  Remove Cart items ============
+2026-07-01 16:22:46 INFO  BaseClass:35 - =======  removed exeution started ======= 
+2026-07-01 16:22:46 INFO  BaseClass:40 -  ======== Product removed successfully =======
+2026-07-01 16:22:47 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:22:51 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:22:52 INFO  BaseClass:23 -  ======= Add to cart page this =========
+2026-07-01 16:22:52 INFO  BaseClass:33 - ======== item add to cart and items views ======== 
+2026-07-01 16:22:53 INFO  BaseClass:41 -  ======== Continue shopping flow completed successfully started ======== 
+2026-07-01 16:22:53 INFO  BaseClass:48 - Continue shopping flow completed successfully
+2026-07-01 16:22:54 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:22:58 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:22:59 INFO  BaseClass:23 - ====== user is on login page ======
+2026-07-01 16:22:59 INFO  BaseClass:26 - Login successful
+2026-07-01 16:22:59 INFO  BaseClass:30 - ====== add item to cart ViewCart ==========
+2026-07-01 16:22:59 INFO  BaseClass:38 - Cart page opened successfully
+2026-07-01 16:23:05 INFO  BaseClass:48 - Checkout page details opened successfully
+2026-07-01 16:23:06 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:23:09 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:23:10 INFO  BaseClass:22 - ====== User is on Login Page ======
+2026-07-01 16:23:10 INFO  BaseClass:24 - Login Successful
+2026-07-01 16:23:11 INFO  BaseClass:29 - Product Added To Cart
+2026-07-01 16:23:17 INFO  BaseClass:34 - Checkout Button Clicked
+2026-07-01 16:23:18 INFO  BaseClass:40 - Checkout Information Entered
+2026-07-01 16:23:18 INFO  BaseClass:46 - Checkout Overview Page Opened Successfully
+2026-07-01 16:23:18 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:23:22 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:23:30 INFO  BaseClass:32 -  ======== Checkout overview page is displayed ========== 
+2026-07-01 16:23:31 INFO  BaseClass:47 -  ======== Checkout overview page is completed ========== 
+2026-07-01 16:23:31 INFO  BaseClass:57 - Order Placed Successfully
+2026-07-01 16:23:33 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:23:37 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:23:37 INFO  BaseClass:35 - User login started
+2026-07-01 16:23:38 INFO  BaseClass:47 - Adding product to cart
+2026-07-01 16:23:39 INFO  BaseClass:53 - Navigating to cart and checkout
+2026-07-01 16:23:46 INFO  BaseClass:84 - Order summary validated
+2026-07-01 16:23:46 INFO  BaseClass:96 - Order placed successfully
+2026-07-01 16:23:46 INFO  BaseClass:108 - User successfully returned to home page
+2026-07-01 16:23:47 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 16:23:51 INFO  BaseClass:72 - Browser launched: edge
+2026-07-01 16:24:00 INFO  BaseClass:59 - Order Placed Successfully
+2026-07-01 16:24:00 INFO  BaseClass:70 - =======Click on menu icon ======
+2026-07-01 16:24:05 INFO  BaseClass:76 - ======= User Should Navigated Back to Home Screeen ======
+2026-07-01 16:24:06 INFO  BaseClass:85 - Browser closed successfully
