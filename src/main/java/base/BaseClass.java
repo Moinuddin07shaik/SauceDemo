@@ -38,7 +38,7 @@ public class BaseClass {
 
     @Parameters("browser")
     @BeforeMethod
-    public void launchBrowser(@Optional("Chrome") String browser) {
+    public void launchBrowser(@Optional("firefox") String browser) {
 
         WebDriver localDriver;
 
