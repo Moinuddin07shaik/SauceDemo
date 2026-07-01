@@ -1,0 +1,1 @@
+{"uuid":"75423a1b-56d2-41cd-97ec-b14fbb81e1af","name":"verifyMultipleAddCart","children":["2b12e68e-f7ac-4d82-987f-5f58ed3bceda"],"befores":[{"name":"loginData","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1782908292614,"stop":1782908292614}],"afters":[],"start":1782908292613,"stop":1782908411399}
