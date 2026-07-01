@@ -10,7 +10,7 @@
 
     <!-- Chrome Tests -->
     <test name="Firefox">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="tests.LoginTest"/>
             <class name="tests.AddCartTest"/>
