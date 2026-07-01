@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import base.BaseClass;
 
@@ -13,7 +14,9 @@ public class ScreenshotUtil {
 
     public static String captureScreenshot(String testName) {
 
-        TakesScreenshot ts = (TakesScreenshot) BaseClass.driver;
+        WebDriver driver = BaseClass.driver.get();
+
+        TakesScreenshot ts = (TakesScreenshot) driver;
 
         File src = ts.getScreenshotAs(OutputType.FILE);
 

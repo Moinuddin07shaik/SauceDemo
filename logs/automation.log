@@ -2069,3 +2069,20 @@
 2026-07-01 17:50:05 INFO  BaseClass:70 - =======Click on menu icon ======
 2026-07-01 17:50:09 INFO  BaseClass:76 - ======= User Should Navigated Back to Home Screeen ======
 2026-07-01 17:50:11 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 18:13:14 INFO  BaseClass:72 - Browser launched: chrome
+2026-07-01 18:13:14 INFO  BaseClass:17 - ====== User is on Login Page ======
+2026-07-01 18:13:14 INFO  BaseClass:21 - Login attempted with user: standard_user
+2026-07-01 18:13:14 INFO  BaseClass:25 - Current URL after login: https://www.saucedemo.com/inventory.html
+2026-07-01 18:13:14 INFO  BaseClass:34 - Login successful for user: standard_user
+2026-07-01 18:13:15 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 18:13:17 INFO  BaseClass:72 - Browser launched: chrome
+2026-07-01 18:13:17 INFO  BaseClass:22 - User is on Login Page
+2026-07-01 18:13:18 INFO  BaseClass:28 - Login attempted with user: standard_user
+2026-07-01 18:13:18 INFO  BaseClass:37 - User is on Inventory Page - Starting Add to Cart flow
+2026-07-01 18:13:18 INFO  BaseClass:43 - Item added and cart opened successfully
+2026-07-01 18:13:18 INFO  BaseClass:85 - Browser closed successfully
+2026-07-01 18:13:21 INFO  BaseClass:72 - Browser launched: chrome
+2026-07-01 18:13:21 INFO  BaseClass:22 - ====== Login Test Started ======
+2026-07-01 18:13:21 INFO  BaseClass:26 - Login attempted for user: standard_user
+2026-07-01 18:13:21 INFO  BaseClass:34 - Login successful - Inventory Page opened
+2026-07-01 18:13:22 INFO  BaseClass:40 - Cart Count after adding products: 2
